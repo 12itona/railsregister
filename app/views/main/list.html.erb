@@ -1,0 +1,16 @@
+<table>
+    <tr>
+    <th>名前</th>
+    <th>年齢</th>
+    </tr>
+    <tr>
+    <% @users.each do |u| %>
+        <td><%= u.user_name %></td>
+    <% end %>
+    </tr>
+    <tr>
+    <% @users.each do |u| %>
+        <td><%= u.user_age %></td>
+    <% end %>   
+    </tr>
+</table>

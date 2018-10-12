@@ -1,0 +1,14 @@
+<h1>Top#top</h1>
+<p>Find me in app/views/top/top.html.erb</p>
+<%= link_to "新規作成", :controller => "main", :action => "index" %>
+
+<%= form_tag(:controller => "main", :action => "list") %>
+
+
+  <div class="field">
+    <%= label_tag :search, 'サーチ' %><br />
+    <%= text_field_tag :search, '' %>
+  </div>
+  
+
+<%= submit_tag '検索' %>

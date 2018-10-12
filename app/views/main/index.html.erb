@@ -1,0 +1,15 @@
+名前と年齢
+<%= form_tag action: :create do %>
+    <div class="field">
+        <%= label_tag :user_name, '名前'%><br />
+        <%= text_field_tag :user_name, '' %>
+    </div>
+    <div class="field">
+        <%= label_tag :user_age, '年齢'%><br />
+        <%= text_field_tag :user_age, '' %>
+    </div>
+    <%= submit_tag '登録' %>
+    
+<% end %>
+    
+    
