@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     post'main/create'
     get'top/top'
     post'main/list'
+    post'main/edit'
+    patch'main/update'
 end

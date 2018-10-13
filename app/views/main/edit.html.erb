@@ -1,0 +1,15 @@
+<%= form_for @users, :url => {:action => 'update'} do |f| %>
+<%= f.hidden_field :id %>
+    <div class="field">
+        <%= f.label :user_name, '名前'%><br />
+        <%= f.text_field :user_name %>
+    </div>
+    <div class="field">
+        <%= f.label :user_age, '年齢'%><br />
+        <%= f.text_field :user_age %>
+    </div>
+    <%= f.submit '更新' %>
+    
+<% end %>
+    
+    

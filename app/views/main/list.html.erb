@@ -5,7 +5,7 @@
     </tr>
     <tr>
     <% @users.each do |u| %>
-        <td><%= u.user_name %></td>
+       <%= link_to u.user_name, main_edit_path(:id => u.id), :method => :post %>
     <% end %>
     </tr>
     <tr>

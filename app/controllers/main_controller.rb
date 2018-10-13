@@ -13,12 +13,20 @@ class MainController < ApplicationController
         
     end
     
-    # def edit
-    
-    # end 
+    def edit
+      @users = User.find(params[:id])
+    end 
+    def update
+      userInfo = params[:user]
+      User.where(id: userInfo[:id]).update_all(user_name: userInfo[:user_name], user_age: userInfo[:user_age])
+    end
     
     def list
       @users = User.where('user_name like ?',"%#{params[:search]}%")
       
+    end
+    private
+    def user_params
+        params.require(:user).permit(:user_name, :user_age, :id)
     end
 end
